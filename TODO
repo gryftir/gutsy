@@ -1,4 +1,4 @@
-print (current, move to debug option -d|debug)
+DONE print (current, move to debug option -d|debug)
 save results to specified file (otherwise results) -r|results=s
 download with curl -c
 download with wget -w

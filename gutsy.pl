@@ -5,17 +5,25 @@ use Getopt::Long;
 
 my $localfile = 'aprilhiring.html';
 my $url = 'https://news.ycombinator.com/item?id=5472746';
-
+my $savefile = 'results.txt';
+my $debug = 0;
 GetOptions(
 	"u|url=s" => \$url,
-	"f|filename=s" => \$localfile);
+"f|filename=s" => \$localfile,
+	"r|results=s"=> \$savefile,
+"d|debug" => \$debug);
 my $response = getstore ($url, $localfile);
-print "$localfile\t$url\t$response\n";
+print "$localfile\t$url\t$response\n" if $debug;
 
 open (my $filehandle, "<", $localfile) or die "$!\n";
 
-
 my @lines = <$filehandle>;
+close ($filehandle);
+my $savefileref;
+if (!$debug)
+{
+	open ($savefileref, ">", $savefile) or die "$! $savefile\n";
+}
 my $file = join '<p>', @lines;
 @lines = split '<img src="s.gif" height=1 width=0>', $file;
 foreach my $entry (@lines){
@@ -26,10 +34,12 @@ foreach my $entry (@lines){
 			if ($entry =~ /<a href="user\?id=(.+?)">/i){
 				my $user_url = $1;
 				$user_url = 'USER: http://news.ycombinator.com/user?id=' . $user_url;
-				print "$user_url\n";
-		}
-			print "$intern\n\n";
-			sleep 2;	
+				if ($debug){print "$user_url\n";}
+				else {print $savefileref "$user_url\n";}
+			}
+			if ($debug){print "$intern\n\n";}
+			else {print $savefileref "$intern\n\n";} 	
 		}
 	}
 }
+close $savefileref unless $debug;
