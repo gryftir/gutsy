@@ -3,6 +3,7 @@ save results to specified file (otherwise results) -r|results=s
 download with curl -c
 download with wget -w
 use local file -l|local=s
+add: Comment code for clarity, since other people may read it
 
 Other todo in order of how easy it would probably be
 parse out url for the link to the thread
