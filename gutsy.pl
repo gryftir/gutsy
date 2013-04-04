@@ -6,13 +6,16 @@ use Getopt::Long;
 my $localfile = 'aprilhiring.html';
 my $url = 'https://news.ycombinator.com/item?id=5472746';
 my $savefile = 'results.txt';
+my $uselocal = 0;
 my $debug = 0;
 GetOptions(
 	"u|url=s" => \$url,
 "f|filename=s" => \$localfile,
 	"r|results=s"=> \$savefile,
-"d|debug" => \$debug);
-my $response = getstore ($url, $localfile);
+	"l|local" => \$uselocal
+);
+
+my $response = getstore ($url, $localfile) unless $uselocal;
 print "$localfile\t$url\t$response\n" if $debug;
 
 open (my $filehandle, "<", $localfile) or die "$!\n";

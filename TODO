@@ -1,8 +1,8 @@
 DONE print (current, move to debug option -d|debug)
-save results to specified file (otherwise results) -r|results=s
+DONE save results to specified file (otherwise results) -r|results=s
 download with curl -c
 download with wget -w
-use local file -l|local=s
+DONE use local file -l|local=s
 add: Comment code for clarity, since other people may read it
 
 Other todo in order of how easy it would probably be
