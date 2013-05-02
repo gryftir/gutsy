@@ -5,7 +5,7 @@ use Getopt::Long;
 
 #variable declarations
 my $localfile = 'mayhiring.html';
-my $url = 'https://news.ycombinator.com/item?id=5472746'; #may 2013
+my $url = 'https://news.ycombinator.com/item?id=5637663'; #may 2013
 my $savefile = 'results.txt';
 my $uselocal = 0;
 #debug, prints stuff, but doesn't save results, just prints to screen
@@ -50,12 +50,15 @@ my $file = join '<p>', @lines;
 #this splits on tot level comments. width for comments is used to distinguish
 @lines = split '<img src="s.gif" height=1 width=0>', $file;
 #for each string, which starts with a top level comment
+my $debugfile;
+open ($debugfile, ">", "debug.txt");
 foreach my $entry (@lines){
-#get the text of the comment	
+#get the text of the comment
+	print $debugfile "$entry\n";
 	if( $entry =~ /<span class="comment"><font color=#000000>(.+?)<\/font><\/span>(.*)/i){
 		my $intern = $1;
 #test for an internship related word		
-		if ($intern =~ /\b(intern|internship|interns|interships)\b/i){
+		if ($intern =~ /[[:^alpha:]](intern|internship)[sS]?[[:^alpha:]]/i){
 #replace <p> with new lines
 			$intern =~ s/<p>/\n/gi;
 #get user name and print HN link to them
