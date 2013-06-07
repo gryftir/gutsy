@@ -4,8 +4,8 @@ use LWP::Simple;
 use Getopt::Long;
 
 #variable declarations
-my $localfile = 'mayhiring.html';
-my $url = 'https://news.ycombinator.com/item?id=5637663'; #may 2013
+my $localfile = 'junehiring.html';
+my $url = 'https://news.ycombinator.com/item?id=5803764';
 my $savefile = 'results.txt';
 my $uselocal = 0;
 #debug, prints stuff, but doesn't save results, just prints to screen
