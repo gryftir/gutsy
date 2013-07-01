@@ -4,8 +4,8 @@ use LWP::Simple;
 use Getopt::Long;
 
 #variable declarations
-my $localfile = 'junehiring.html';
-my $url = 'https://news.ycombinator.com/item?id=5803764';
+my $localfile = 'julyhiring.html';
+my $url = 'https://news.ycombinator.com/item?id=5970187';
 my $savefile = 'results.txt';
 my $uselocal = 0;
 #debug, prints stuff, but doesn't save results, just prints to screen
@@ -23,7 +23,7 @@ GetOptions(
 #use curl, useful because LWP requires a separate module for https connections
 if ($usecurl){
 
-	system ("curl -o ", $localfile, $url) == 0 or die "$!\n curl failed\n";
+	system ("curl", "--silent",  $url, "-o", $localfile) == 0 or die "$!\n curl failed\n";
 }
 #download with perl unless using a local file
 else {
