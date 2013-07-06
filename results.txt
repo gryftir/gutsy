@@ -1,163 +1,27 @@
-USER: http://news.ycombinator.com/user?id=spicyj
-Mountain View, CA - full-time and intern, designers and devs
-Khan Academy's mission is to provide a free world-class education for anyone anywhere.
-Last month we hit 1 billion math problems done on the site and 2 million more are done each day. Here's some stuff we've been working on lately:
-* creating adaptive assessments to accurately measure student knowledge
-* running new A/B tests every week to learn how best to teach students and grow our userbase
-* building infrastructure to allow us to scale up our content creation efforts
-* internationalizing our entire website to enable pilot implementations in Mexico and Brazil
-If any of this might sound interesting to you, we'd love to hear from you. We're hiring designers and all types of devs -- mobile, frontend, backend, analytics.
-If you're looking for an internship, we've found 13 great interns for this summer and we'd love to squeeze you in.
-<a href="https://www.khanacademy.org/careers/interns" rel="nofollow">https://www.khanacademy.org/careers/interns</a>
-<a href="https://www.khanacademy.org/careers" rel="nofollow">https://www.khanacademy.org/careers</a>
-We're just at the tip of the iceberg in terms of what's possible here. Big plans ahead.
+USER: http://news.ycombinator.com/user?id=snowmaker
+Scribd (YC '06), San Francisco - H1B, FULL-TIME, and INTERN are all welcome
+Scribd (social publishing &#38; eBooks, top 100 website, 35 people) is hiring talented hackers and other technical people for a broad range of technologies.
+We've hired FIVE full-time people and TWO summer interns from these "Who is Hiring" threads, including one just last month ... it really works!!
+We're looking for people who want to work with:
+* Ruby on Rails (we're the #2 largest rails site, after Twitter)
+* Javascript (we recently switched to Coffeescript and are loving it)
+* iOS
+* Machine Learning / data mining / recommendations
+* Back-end problems: scalability, web crawling, big data, analytics
+* DevOps and web infrastructure
+That said, we care way more about your personality and general hacking skills then what languages you've used so far, so if you haven't used these but want to break into mobile or web development, this could be a good opportunity for you. We've hired people from these threads with everywhere from 0 to 10 years of experience. We're profitable, very well funded and have a really fun office environment (go-karts + a rock climbing wall!). We've got flexible hours, a very engineer-driven company culture, and a really terrific team.
+Scribd alumni have gone on to found 4 other YCombinator companies, more than from any other startup. We think this says something about the kind of people that we like to hire.
+We are always looking for international people interested in moving to the US and can help you secure a visa.
+See more at scribd.com/jobs and feel free to email me directly: jared at scribd.com
 
-USER: http://news.ycombinator.com/user?id=rwalker
-Cue (<a href="http://www.cueup.com" rel="nofollow">http://www.cueup.com</a>), San Francisco, full time + interns
-At Cue we connect our users with the right piece of information at the right time by understanding and correlating related data from across their email, contacts, calendar, files, and social streams.
-This is a really hard problem with real world impact.  Our software processes billions of documents in real time, extracts semantics from text, and searches across disparate document sets and document types.  I also honestly believe our product has the opportunity to change the world by making everyone in it more productive.  We've built everything with a team of only 12: 10 eng, 1 designer, 1 everything else.
-We're hiring all manner of engineers and engineering interns - generalists, devops, iOS, Android, NLP, ML.   We primarily use Python, Java, JavaScript, and Objective-C but we always love to talk to people with great general skills over specific knowledge.
-Open source projects: <a href="https://github.com/Cue" rel="nofollow">https://github.com/Cue</a>
-Tech blog: <a href="http://tech.cueup.com/" rel="nofollow">http://tech.cueup.com/</a>
-Jobs page: <a href="https://www.cueup.com/jobs" rel="nofollow">https://www.cueup.com/jobs</a>
-Apply to: jobs+hn@cueup.com
-
-USER: http://news.ycombinator.com/user?id=mindcrime
-Chapel Hill, NC
-Raleigh, NC
-Durham, NC
-Remote - maybe, see below.
-Fogbeam Labs.
-At Fogbeam Labs, we're not just "putting the enterprise in enterprise social network", and we're not just re-inventing enterprise software, we're re-inventing the enterprise!  Old fashioned "command and control" structures can't adapt fast enough for today's dynamic, fast-paced business environment and the enterprises of the future will feature adaptive, sense &#38; respond management, built on top of emergent networks and teams that assemble, overcome a challenge and disperse only to form again elsewhere.
-We are bringing together Machine Learning, Artificial Intelligence, Social Network Analysis, Social Networking, Business Process Management, Workflow Automation, Business Intelligence and Knowledge Management to build tools to provide enterprises the capabilities they need to collaborate and compete in this new era.
-We are a "pure play" Open Source company where all of our products are developed in the open, licensed under <i>real</i> Open Source licenses (mostly Apache Software License v2), developed collaboratively with the community. We don't do "throw it over the wall" code dump style "open source" ala Android or whatever.
-Do you love Open Source, and radically cool technologies?  Do you like the idea of using awesome technology to solve gnarly business problems? Have you ever found yourself daydreaming about things like "Could there be an actual commercial application for Plan 9" or "How could a business use an immersive 3D virtual reality type world for something productive"?   If so, you might want to talk to us...  We're looking for hackers, sales-people and interns as follows:
-#SALES#
-Looking for inside and outside sales people.  Experience selling enterprise software solutions is desirable, but we're also very open to training someone from the ground up.  If you enjoy interacting with people, have a highly social nature, like solving hard problems and want to make a pile of money in the process, get in touch.  Experience with a well known sales methodology such as Solution Selling is a bonus, but not absolutely required.  Remote work arrangements possible, depending on details.  Call us and let's talk.  We really are interested in everything from demonstrated sales superstars to newbies who have never sold before (yes, we'll train the right person(s)).
-#INTERNS#
-Looking for a chance to work with some really exciting technology over the summer, contribute to the Open Source world, and learn all about life in a self-funded, bootstrapped startup?  Consider interning with us this summer.  Internships might be paid or unpaid depending on some details, but at the very minimum we can promise you a glowing reference letter, recommendations (assuming you really <i>do</i> good work, of course!) and access to our networks for future purposes. And, depending on how things shake out, maybe a job offer if things go well.  If you like the idea of working with Groovy, Grails, Mahout, Solr, Lucene, UIMA, OpenNLP, Camel, Hadoop, etc. -  and you're interested in graph theory, social network analysis, text mining, machine learning, etc. - ping us.  Interns would need to be onsite in the Chapel Hill / Raleigh / Durham area
-#COFOUNDER#
-We're open to adding another member to the founding team.  We're 2 people now, down from a previous 3, due to one co-founder being overwhelmed by life circumstances and choosing to step aside.  An ideal potential co-founder would fit one of two molds:  "Developer" or "Business Guy".
-"Developer" should have extensive experience programming in Java and Groovy and experience with Grails, as well as considerable indepth experience with typical components of the Java enterprise stack:  Spring, Hibernate, JBoss, Tomcat, etc.  Strong knowledge of SQL and one or more relational databases (preferably PostgreSQL) would be needed.  Strongly preferred would be some experience with machine learning, text mining, social network analysis, enterprise integration, data mining, etc.  Experience contributing to Open Source projects is a huge plus.
-"Business Guy (or Gal!)" would have would ideally have experience in marketing, product management and/or sales, in the enterprise software world.  Knowledge of the Customer Development process would be preferred, as well as experience with at least one well known sales methodology such as Solution Selling.  Actual sales closing experience would be a HUGE plus here, but isn't absolutely required.  Experience developing partnerships, working with industry analysis,  and any PR knowledge would also be highly valued.  If you speak terms like "differentiation" and "positioning" and read Jack Trout and Al Ries  books for leisure, you're our kind of gnarly dude / dudette.
-Anybody we would add to the founding team at this point would need to live in the Chapel Hill, Raleigh, Durham area.
-Email Phil at prhodes (at) fogbeam (dot) com for more info.
-
-USER: http://news.ycombinator.com/user?id=slykat
-Location: Boston, MA.
-Company: Mobee (www.getmobee.com)
-Stage: Just raised $1M of seed stage funding
-Type: Full-time - unfortunately we aren't taking anyone remotely now
-Obligatory TC article: <a href="http://techcrunch.com/2012/11/19/backed-by-1-1-million-in-funding-mobee-launches-a-mobile-mystery-shopping-app-which-rewards-customers-for-reviewing-businesses/" rel="nofollow">http://techcrunch.com/2012/11/19/backed-by-1-1-million-in-fu...</a>
-We are looking for 1) Mobile Engineer 2) Head of Sales 3) Summer Interns
-E-mail directly at saikat@getmobee.com
-===================
-<i>About Us</i>
-Mobee is a crowd-sourced mystery-shopping app that pays users to review service quality at businesses. We provide the "voice of the customer" data to businesses through our crowdsourced mobile app.
-We are looking for smart, motivated, and scrappy individuals with strong analytical and problem-solving skills. Our team is made of Google, MIT, Berkeley, and SCVNGR alum. We've recently moved into an amazing multi-story office space at the top of Old City Hall. Pay is competitive and significant upside on equity side.
-For the engineer role:
-* 4+ years experience in mobile (ideally both iOS &#38; Android but must have significant experience in Objective C)
-* Comfortable building out our software dev processes (agile / scrum), QA, testing, etc.
-* Experience on working on small development teams (our eng team is at 4)
-Make sure to check us our app in the app store. This is a startup environment so you should be prepared for hard work, self-discipline, nerf gun warfare, and passionate but amazing discussions. We raised $1M from top angels &#38; VCs and are currently at 10 people.
-
-USER: http://news.ycombinator.com/user?id=falsedan
-Edinburgh/Glasgow/Singapore - Skyscanner, Intern &#38; Full-time
-As Kayak is for the US, Skyscanner is for the rest of the world. Users make over a million flight searches per day over 100s of millions of flight quotes. We run on Windows and Linux, SQL &#38; NoSQL, SVN &#38; Git.
-We've just moved to new offices with lots of desk space, and are looking for .Net developers, Python developers, front-end, back-end, designers, infrastructure, testers, and interns. The full list of jobs is <a href="http://www.skyscanner.net/jobs/team" rel="nofollow">http://www.skyscanner.net/jobs/team</a>
-We have regular lunchtime talks, a very competitive ping-pong league, personal laptops for all employees, do agile development &#38; continuous integration, and dashboards for everything.
-daniel@skyscanner.net
-
-USER: http://news.ycombinator.com/user?id=joshmlewis
-Charleston, SC | Dabble
-Intern and possibly Full-Time - Developer
-* Experience developing with Ruby on Rails or Python
-* Experience with SASS-based CSS
-* Experience with Backbone.js
-* Experience with mobile and RubyMotion is a plus
-===================================================
-We're making it easier for people to find dates with people they have aligning interests with. We have v1 of the app done and waiting for review in the App Store. We're launching at a local university and have pitched a few hundred students for the past few months who have given great interest in the product and are excited to get their hands on it. We're hitting the ground running and are excited for this launch to gather data and feedback and improve our product over the summer. Design and user experience are priority along with the best development practices. We build fast and all consider each other friends.
-If you're out of the internship phase and would like a full-time job instead, contact us anyway and we'll at least chat!
-We're looking for someone to live with the team (just two of us for now) for the summer in beautiful and vibrant Charleston, SC while working on some features for the app.  If all goes well and you're interested we can keep you on board in the fall.
-===================================================
-Perks:
-* Free rent in beautiful Charleston, SC for the summer
-* Monthly pay
-* Free beer and snacks
-* Chance to transition into full-time employee in the fall
-* Experience building out core features of a popular application
-* Airfare to get you here if needed
-Email me at josh@joshmlewis.com.
-
-USER: http://news.ycombinator.com/user?id=ZachTwoSigma
-Two Sigma (SoHo, NYC) - Full Time, Intern, H1B
-At our core, we're a technology company applying our talents to the domain of finance. We've created a system that combines artificial intelligence and keen human insight—a system that's constantly improving and advancing.
-We're looking for a diverse set of technologists to join our team. Our challenges require mastery of areas such as kernel level development, machine learning, and distributed systems. Our team includes a Unix Lifetime Achievement winner, Putnam medalists, ACM Programming competition finalists, and International Mathematics Olympiad medalists. We are proud of our individual pedigrees, but even prouder of our teamwork.
-We tend to hire people with at least a bachelor’s degree in a technical or quantitative field and experience with C or languages that target the JVM, but we are open-minded in our search for critical thinkers who are passionate about technology. We analyze the data-rich domain of finance, but financial experience is not a requirement. We hope to hear from you!
-zachary.weinstein@twosigma.com
-<a href="http://www.twosigma.com/careers.html" rel="nofollow">http://www.twosigma.com/careers.html</a>
-
-USER: http://news.ycombinator.com/user?id=smilliken
-MixRank - San Francisco, CA (full-time, intern)
-Seeking: Data Systems Engineer, Full-Stack Engineer, Summer Interns
-Big data, web crawling, data visualization, machine learning, and other interesting stuff. Happy to chat with anyone— send me an email: scott@mixrank.com.
-We're also hosting a friendly programming competition this Wednesday in San Francisco (SoMA) at 7pm. Email me if you'd like to drop by.
-
-USER: http://news.ycombinator.com/user?id=azmat
-LONDON, the one in the UK - Full-time/ Interns. Developers (Python, Web/JS, Machine Learning, Mobile).
-CITYMAPPER: We're designing and building the ultimate urban transport app- the way you imagined it would exist in the future.
-* <a href="http://citymapper.com/jobs" rel="nofollow">http://citymapper.com/jobs</a>
-* Funded/backed by top folks in Europe.
-* Small team (google, startups, academia), with an active user base, tremendous opportunity right now to have an impact, and share upside.
-* We solve problems the hard way, do our own routing, like open data for cities.
-
-USER: http://news.ycombinator.com/user?id=jklipton
-Mountain View, CA - Quixey - <a href="https://www.quixey.com/careers/" rel="nofollow">https://www.quixey.com/careers/</a> INTERN, H1B
-Quixey is The Search Engine for Apps.  Imagine a world where you can find the perfect app that does exactly what you want, when you want it – we’re building that world.
-Quixey powers app search for major manufacturers, carriers, search engines and web-sites across the globe. We’re well funded, backed by world-class investors and power nearly 100 million queries per month.
-In the past 2 years we've grown from 5 to 60 people. We currently have 15 open positions - 8 in engineering and the rest split between product, business development and recruiting. Hopefully you can come join us.
-We practice Agile/Scrum and most of our code is in Java and Python. Our infrastructure is based on AWS and our stack includes open source software such as Linux, nginx, Hadoop, SQL-lite and Kafka.
-
-USER: http://news.ycombinator.com/user?id=DavidZhangToGo
-INTERN @ NYC / Bangkok, Thailand - Eko
-We are a startup developing enterprise applications that make it faster and simpler for people to communicate.
-What we need:
-We’re looking for a few full stack dev interns for the summer, preferably 12 weeks, negotiable starting date. Our team is currently 4 strong, and you’ll be helping us on every part of the product lifecycle, from concept to implementation to release, and you’ll have a lot of autonomy in the work you do.
-We’re a NYC company but we are relocating our office to Bangkok, Thailand for the summer.  We'll fly all the interns there and cover all travel / housing / visa expenses. Additionally, you’ll be receiving a very competitive stipend.
-If you want an unique summer internship experience and love to travel (for free), this internship is for you. Contact me directly at dzz0615@gmail.com for more info.
-P.S, Adequate ping pong skills required.
-
-USER: http://news.ycombinator.com/user?id=cpg
-Sunnyvale, CA. REMOTE and INTERNS OK.
-Amahi is hiring. Amahi is a seed-stage startup having the largest app store for web apps and media apps. Looking for a generalist, preferably with great ruby/RoR experience, some front-end experience and willing to be flexible. Working remotely is ok. Also interested in interns and freelancers!
-<a href="http://www.amahi.com" rel="nofollow">http://www.amahi.com</a>
-
-USER: http://news.ycombinator.com/user?id=collinjackson
-San Francisco, CA - Apportable (<a href="http://www.apportable.com" rel="nofollow">http://www.apportable.com</a>) full time or intern devs
-We are building a platform for developing Android apps in Objective-C. It's already used by a number of top 100 game developers and we'll be releasing our SDK to the general public soon. We're a team of 15 engineers and are hiring more. Familiarity with iOS and/or Android NDK are a plus. We are a YC company with solid funding, great benefits, already profitable.
-Open source projects: <a href="https://github.com/apportable" rel="nofollow">https://github.com/apportable</a>
-Jobs page: <a href="https://www.apportable.com/jobs" rel="nofollow">https://www.apportable.com/jobs</a>
-Apply to: jobs+hn@apportable.com
-
-USER: http://news.ycombinator.com/user?id=jriediger
-Recommind - San Francisco, CA - Machine Learning and Frontend Engineers - Full-time, Intern, H1B
-Our small team (3 people) is working in the information extraction in semi-/unstructured data space and we are currently trying to grow the team. We are generally looking for strong generalists who share our vision of automatizing and scaling information extraction, but are also open to outstanding specialists in ML/NLP or frontend.
-If you're looking for a work experience with high degree of freedom and flexibility (hours/work from home) while having the perks and benefits of being part of a bigger company, you might be right with us.
-If you're interested please contact me: julian (dot) riediger (at) recommind (dot) com
-
-USER: http://news.ycombinator.com/user?id=cstigler
-San Francisco, CA - full-time or intern JavaScript devs
-Zaption (www.zaption.com) is a web platform to help teachers create interactive video lessons.
-We just raised seed funding and we're hiring for our first employees! If you're interested in education, a master of JavaScript (we run a Node/Mongo stack), and want to take on a big role in a small company, this is right up your alley.
-Learn more at <a href="http://www.zaption.com/jobs" rel="nofollow">http://www.zaption.com/jobs</a> and apply by emailing jobs@zaption.com
-
-USER: http://news.ycombinator.com/user?id=zmillman
-Berkeley, CA ~ Developer Intern at Magoosh (<a href="http://magoosh.com/jobs/mobile-developer-intern/" rel="nofollow">http://magoosh.com/jobs/mobile-developer-intern/</a>)
-Us: A small team of 8 wise-crackers bringing online test prep to the world with 10s of thousands of happy students and an office in downtown Berkeley, one block east of BART.
-You: A friendly budding programmer interested in shipping code and expanding Magoosh’s web, Android and/or iOS apps
-
-USER: http://news.ycombinator.com/user?id=anshu214
-Atlanta, GA/NYC, NY -- Full time and intern positions available
-BetterCloud (<a href="http://www.bettercloud.com/careers/" rel="nofollow">http://www.bettercloud.com/careers/</a>)
-We have multiple positions open in both the Atlanta and New York offices. Please see our website for further details.
+USER: http://news.ycombinator.com/user?id=makmanalp
+Cambridge, MA - CustomMade (<a href="http://www.custommade.com/" rel="nofollow">http://www.custommade.com/</a>) INTERN, REMOTE (possibly)
+Full-time django / python dev, likely onsite, possible remote. Also looking for frontend guys who know backbone / jquery et al. Boilerplate here: <a href="http://www.custommade.com/careers/" rel="nofollow">http://www.custommade.com/careers/</a>
+We're a two-sided marketplace that does matchmaking between professional artisans / craftsmen and buyers. You post your dreams, we find someone to make it real. People come up with some crazy ideas like a custom made quidditch set / proposal ring: <a href="http://blog.custommade.com/portfolio/a-very-harry-potter-proposal/" rel="nofollow">http://blog.custommade.com/portfolio/a-very-harry-potter-pro...</a>
+We're funded by Google Ventures and a ton of others: <a href="http://www.crunchbase.com/company/custommade-ventures" rel="nofollow">http://www.crunchbase.com/company/custommade-ventures</a> So paying you well is not an issue.
+We're right at the point where all the graphs are hockey-stick shaped and we're breaking our own records every week. Of course, with that comes scaling challenges. But it's all part of the fun.
+We have a great team and a great environment that focuses on customers and product development. I get to collaborate with product / UX / support people day to day to build a product that meets a real business need, and makes everyone happy. But when I just need to bang out some code, people leave me alone. Work / life balance is great. Bureaucracy is at a minimum.
+More about our stack / team here: <a href="http://engineering.custommade.com" rel="nofollow">http://engineering.custommade.com</a>
+You're a programmer who has pushed code to production innumerable times, and doesn't cringe at the prospect of collaborating with a team of non-techies every so often. You know the modern web stack well, and specialize in at least one part of it.
+Get in touch with me at mali -at- custommade dotkom
 

@@ -12,7 +12,7 @@ current issues
 gutsy uses a rather simplistic means to parse the html file.
 gutsy generates plain text.
 gutsy doesn't follow More links.
-gutsy isn't polite and doesn't use the recommended API for Hacker ess, and currently has several issues that will be addressed in the next version
+gutsy currently has several issues that will be addressed in the next version
 current issues
 gutsy uses a rather simplistic means to parse the html file.
 gutsy generates plain text.
