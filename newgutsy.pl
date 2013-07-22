@@ -17,9 +17,18 @@ foreach my $post (@posts) {
 	if ($user) {
 		$user = $user->right()->look_down("_tag", "a", "href", qr/^user?/);
 		$user->attr("href") =~ /^user\?id=(.*)/;
-		print $1, "\n", $user->depth(), "\n";	
+		print"\nuser ", $1, "\n\n";
+		my $font = $user->look_up("_tag", "td")->look_down("_tag", "font");
+		print $font->as_text(), "\n";	
+#		foreach my $tagname ($user->lineage()) {
+#			print $tagname->tag(), " ";
+#			my $text = $tagname->look_down("_tag", "font");
+#			if ($text) {
+#				print $text->as_text(), "\n";
+#				last;
+#			}
+#		}
 	}
-	#
 }
 #my @users =  $root->look_down("_tag", "a", "href", qr/^user?/);
 #shift @users; #get rid of who is hiring
