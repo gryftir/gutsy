@@ -1,14 +1,14 @@
 #!/usr/bin/perl -w
 use strict;
 use HTML::TreeBuilder;
-
+use GutsyPage;
 my $localfile = "junehiring.html";
 open (my $filehandle, "<", $localfile) or die "$!\n";
 my @pages; #for the More Pages.  Note class="title" 2 on first page q, 1 on intermediate page, none on last page.
-my $root = HTML::TreeBuilder->new_from_file($filehandle);
+my $gutsypage = GutsyPage->new_from_filehandle($filehandle);
 
 
-my @posts = $root->look_down("_tag", "img", 
+my @posts = $gutsypage->{page}->look_down("_tag", "img", 
 	"width", "0",
 	"src", "s.gif");
 foreach my $post (@posts) {
