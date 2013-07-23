@@ -3,7 +3,13 @@ use strict;
 use warnings;
 use HTML::TreeBuilder;
 
-
+sub download {
+	my $classname = shift;
+	my $url = shift;
+	mkdir (".files", "0755") unless -d ".files";
+	$url =~ /(\d+)$/;
+	system("curl", "--silent", $url, "-o", ".files/$1") == 0 or die "$!\n curl failed\n";
+}
 
 
 sub new_from_filehandle {
@@ -29,13 +35,11 @@ sub new_from_url {
 	my $classname = shift;
 	my $url = shift;
 	my $nocurl = shift;
-	my $hascurl;
 	my $self = {};
 	if (!$nocurl ) { #if we didn't say don't use curl
 		if (  system("which curl 1> /dev/null")	) {
-			$url =~ /(\d+)$/;
-			system("curl", "--silent", $url, "-o", $1) == 0 or die "$!\n curl failed\n";
-			$self = gutsypage->new_from_file($1);	
+			GutsyPage->download($url);
+			$self = GutsyPage->new_from_file($1);	
 		}
 		else {die "$!\n no curl on system\n";}
 	}
