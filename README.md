@@ -13,7 +13,7 @@ License is GPL3
 
 Note: Gutsy is a work in progress, and currently has several issues that will be addressed in the next version
 
-current issue
+current issues:
 <li>
 <ul><del>gutsy uses a rather simplistic means to parse the html file.</del></ul>
 
