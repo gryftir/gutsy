@@ -7,7 +7,7 @@ sub download {
 	my $classname = shift;
 	my $url = shift;
 	mkdir (".files", "0755") unless -d ".files";
-	$url =~ /(\d+)$/;
+	$url =~ /(\w+)$/;
 	system("curl", "--silent", $url, "-o", ".files/$1") == 0 or die "$!\n curl failed\n";
 }
 
