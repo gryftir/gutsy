@@ -16,9 +16,11 @@ foreach my $post (@posts) {
 	my $user = $line[0]->right();
 	if ($user) {
 		$user = $user->right()->look_down("_tag", "a", "href", qr/^user?/);
-		$user->attr("href") =~ /^user\?id=(.*)/;
-		print"\nuser ", $1, "\n\n";
 		my $font = $user->look_up("_tag", "td")->look_down("_tag", "font");
-		print $font->as_text(), "\n";	
+		if ($font->as_text()	=~ /[[:^alpha:]](intern|internship)[sS]?[[:^alpha:]]/i) {
+			$user->attr("href") =~ /^user\?id=(.*)/;
+			print"\nuser ", $1, "\n\n";
+			print $font->as_text(), "\n";
+		}
 	}
 }
