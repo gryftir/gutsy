@@ -2,6 +2,7 @@ gutsy version .2
 =====
 
 .2 uses HTML::TreeBuilder
+
 .1 used simple regex
 
 for the gutsy intern to be: scrapes HN's who's hiring for internships
@@ -12,25 +13,17 @@ License is GPL3
 
 Note: Gutsy is a work in progress, and currently has several issues that will be addressed in the next version
 
-*current issue
+current issue
+<li>
+<ul><del>gutsy uses a rather simplistic means to parse the html file.</del></ul>
 
-*~~gutsy uses a rather simplistic means to parse the html file.~~
+<ul>gutsy generates plain text.</ul>
 
-*gutsy generates plain text.
+<ul>gutsy doesn't follow More links.</ul>
 
-*gutsy doesn't follow More links.
+<ul>gutsy isn't polite and doesn't use the recommend API for Hacker News</ul>
+</li>
 
-*gutsy currently has several issues that will be addressed in the next version
-
-*current issues
-
-*gutsy uses a rather simplistic means to parse the html file.
-
-*gutsy generates plain text.
-
-*gutsy doesn't follow More links.
-
-*gutsy isn't polite and doesn't use the recommended API for Hacker News
 
 Other features to be added in the next version: 
 add search options for remote, H1B, and categorize by location
