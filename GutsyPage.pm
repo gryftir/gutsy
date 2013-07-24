@@ -3,6 +3,23 @@ use strict;
 use warnings;
 use HTML::TreeBuilder;
 
+sub new_complete_url {
+	my $classname = shift;
+	my $url = shift;
+  my $self = GutsyPage->new_from_url($url);
+	for (my $index = 0; (my $next =  $self->has_more($index)) ; $index++) {
+		my $addurl = "https://news.ycombinator.com" . $next->attr("href");
+		$self->add_from_url($addurl);	
+	}
+}
+
+sub has_more {
+	my $self = shift;	
+	my $index = shift || "0";
+	return $self->{page}[$index]->look_down("_tag" => "a", "href" => qr/^\/x\?.*/); 
+}
+
+
 sub download {
     my $classname = shift;
     my $url       = shift;
