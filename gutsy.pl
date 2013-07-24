@@ -8,7 +8,7 @@ my @pages; #for the More Pages.  Note class="title" 2 on first page q, 1 on inte
 my $gutsypage = GutsyPage->new_from_filehandle($filehandle);
 
 
-my @posts = $gutsypage->{page}->look_down("_tag", "img", 
+my @posts = $gutsypage->{page}[0]->look_down("_tag", "img", 
 	"width", "0",
 	"src", "s.gif");
 foreach my $post (@posts) {
