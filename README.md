@@ -23,7 +23,14 @@ current issues:
 <ul>gutsy generates plain text.</ul>
 
 <ul>gutsy isn't polite and doesn't use the recommended API for Hacker News.  I'd love to do this, if somebody wants to send me example code</ul>
+
+<ul>gutsy doesn't store older pages</ul>
+<ul>gutsy doesn't have built in search</ul>
+<ul>gutsy doesn't have command line options</ul>
+<ul>gutsy doesn't have an interactive mode with the most useful queries</ul>
+
 </li>
+
 
 
 Currently you can pass a subroutine to spit out relevant comments.
