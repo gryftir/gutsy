@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use HTML::TreeBuilder;
 
+#GutsyPage collects TreeBuilder objects for pages from a Monthly HN Who's Hiring Post
 sub match_comments {
     my $self     = shift;
     my $function = shift;
