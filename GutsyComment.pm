@@ -1,5 +1,4 @@
 package GutsyComment;
-use HTML::TreeBuilder;
 use strict;
 use warnings;
 
@@ -10,14 +9,15 @@ sub new {
 	my $posts = \@_;
 	my $comarrayref=[];
 	foreach my $post (@$posts) {
-		my $right = 	$post->lineage()->[0]->right()->right();
+		next unless $post;
+		my @line = 	$post->lineage();
+		my $right =$line[0]->right();
 		if ($right) {
 		my $comment = {};
 			$comment->{user} = $right->right()->look_down( "_tag", "a", "href", qr/^user?/ );
        $comment->{user}->attr("href") =~ /^user\?id=(.*)/;
 			 $comment->{username} = $1;
 			 $comment->{post} = $comment->{user}->look_up( "_tag", "td" )->look_down( "_tag", "font" );
-        print "\nuser ", $1, "\n\n";
 				push (@$comarrayref, $comment);
 		}
 	}
