@@ -1,6 +1,8 @@
 gutsy version .3
 =====
 
+.4 printing is better thanks to using format() instead of as_text.  Also added GutsyComment class, with an array of comments.
+
 .3 Follow's More links to download all top level comments, allows passing a subroutine reference to pull out specific entries.
 
 .2 uses HTML::TreeBuilder
