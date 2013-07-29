@@ -23,4 +23,22 @@ sub new {
 	}
 	return $comarrayref;
 }
+
+#getters
+
+sub get_user {
+	my $self = shift;
+	return $self->{user};
+}
+sub get_username {
+	my $self = shift;
+	return $self->{username};
+}
+
+sub get_post {
+	my $self = shift;
+	return $self->{post};
+}
+
+
 1;
