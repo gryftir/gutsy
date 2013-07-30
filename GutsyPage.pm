@@ -25,6 +25,7 @@ sub new_from_filehandle {
 	$self->{page} = [];
 	$self->{page}[0] = HTML::TreeBuilder->new_from_file($filehandle);
 	$self->{comments}= [];
+	close $filehandle;
 	bless( $self, $classname );
 	$self->make_comments();
 	return $self;

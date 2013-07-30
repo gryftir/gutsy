@@ -18,6 +18,7 @@ sub new {
        $comment->{user}->attr("href") =~ /^user\?id=(.*)/;
 			 $comment->{username} = $1;
 			 $comment->{post} = $comment->{user}->look_up( "_tag", "td" )->look_down( "_tag", "font" );
+			 bless ($comment, $classname);
 				push (@$comarrayref, $comment);
 		}
 	}
