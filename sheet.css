@@ -1,0 +1,8 @@
+ div{
+    background: rgb(204,204,255);
+    padding: 0.5em;
+		margin: 10px 0px 0px 10px;
+		 border: solid;
+		 border-width: thin;
+		 width: 100%;
+  }
