@@ -35,6 +35,7 @@ sub print_to_html {
 sub get_input {
   print join "\n", @_; 
 	my $input = <STDIN>;
+	chomp $input;
 	return $input;
 }
 
@@ -46,9 +47,13 @@ return get_input("input url to download from: ");
 
 #}
 
-sub search_comments {
-	my $comments = shift;
- my	@searchterms = @_;
+sub get_regex {
+return get_input("enter in a valid regex: ");
+}
 
+sub pen_write_file {
+	my $filename = get_input("enter name of file to write to: ");
+	open (my $filehandle, ">", $filename) or die "$! can't open file";
+	return $filehandle;
 }
 1;

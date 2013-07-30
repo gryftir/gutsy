@@ -1,5 +1,7 @@
-gutsy version 0.4
+gutsy version 0.41
 =====
+
+v0.41 can now print to html, downloading is no longer silent
 
 v0.4 printing is better thanks to using format() instead of as_text.  Also added GutsyComment class, with an array of comments.
 
@@ -20,9 +22,9 @@ Note: Gutsy is a work in progress, and currently has several issues that will be
 current issues:
 <li>
 <ul><del>gutsy uses a rather simplistic means to parse the html file.</del>Done, uses HTML::TreeBuilder</ul>
-<ul><del>gutsy doesn't follow More links.</del>done, using curl </ul>
+<ul><del>gutsy doesn't follow More links.</del>Done, using curl </ul>
 
-<ul>gutsy generates plain text.</ul>
+<ul><del>gutsy generates plain text.</del>Done, gutsy can now make an html page and comes with a basic stylesheet</ul>
 
 <ul>gutsy isn't polite and doesn't use the recommended API for Hacker News.  I'd love to do this, if somebody wants to send me example code</ul>
 

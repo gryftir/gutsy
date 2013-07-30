@@ -123,6 +123,7 @@ sub download {
 	mkdir(".files") unless -d ".files";
 	$url =~ /(\w+)$/;
 	my $filesave = ".files/" . $1 . ".html";
+	print "Downloading $url ...\n";
 	system("curl --silent $url -o $filesave") == 0
 		or die "$!\n curl failed\n";
 	return $1 . ".html";
