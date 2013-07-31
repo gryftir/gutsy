@@ -1,6 +1,52 @@
 gutsy version 0.5
 =====
 
+installation
+-----------
+
+gutsy requires curl and perl, and git to install.
+
+    sudo apt-get update
+    sudo apt-get install curl perl  
+    
+    git clone https://github.com/gryftir/gutsy.git ~/gutsy
+    cd ~/gutsy
+    ./gutsy.pl or perl gutsy.pl to run
+    
+
+
+Gutsy requires curl, but can be made to work with LWP::Simple and Crypt:SSLeay http://search.cpan.org/~nanis/Crypt-SSLeay-0.64/SSLeay.pm for local download
+
+Licence
+--------
+
+License is GPL3
+
+Note: Gutsy is a work in progress, and currently has several issues that will be addressed in the next version
+
+Current Goals (in no particular order):
+-----------------------------------
+
+<li>
+<ul>make gutsy polite and have it use the recommended API for Hacker News.  I'd love to do this, if somebody wants to send me example code</ul>
+<ul>make gutsy  have an interactive mode with the most useful queries</ul>
+<ul>make gutsy doesn't store older pages.  I am not sure this is possible with current pages, but storing old pages may work, and may be useful for statistical analysis</ul>
+<ul>make gutsy have built in search</ul>
+<ul>allow mixing subroutines in command line mode</ul>
+<ul>add more subroutines.  I take pull requests</ul>
+
+<ul><del>gutsy doesn't have command line options</del> Done, now takes command line arguments</ul>
+<ul><del>gutsy uses a rather simplistic means to parse the html file.</del> Done, uses HTML::TreeBuilder</ul>
+<ul><del>gutsy doesn't follow More links.</del> Done, using curl </ul>
+<ul><del>gutsy generates plain text.</del> Done, gutsy can now make an html page and comes with a basic stylesheet</ul>
+
+
+
+</li>
+
+Version Info
+-------
+
 v0.5 added GutsyExample with H!B, Remote, intern, SF bay area, and perl subroutines;
 
 v0.41 can now print to html, downloading is no longer silent
@@ -13,29 +59,6 @@ v0.2 uses HTML::TreeBuilder
 
 v0.1 used simple regex
 
-for the gutsy intern to be: scrapes HN's who's hiring for internships
-
-Requires Crypt:SSLeay http://search.cpan.org/~nanis/Crypt-SSLeay-0.64/SSLeay.pm for local download or curl, as well as LWP::Simple
-
-License is GPL3
-
-Note: Gutsy is a work in progress, and currently has several issues that will be addressed in the next version
-
-current issues:
-<li>
-<ul><del>gutsy uses a rather simplistic means to parse the html file.</del>Done, uses HTML::TreeBuilder</ul>
-<ul><del>gutsy doesn't follow More links.</del>Done, using curl </ul>
-
-<ul><del>gutsy generates plain text.</del>Done, gutsy can now make an html page and comes with a basic stylesheet</ul>
-
-<ul>gutsy isn't polite and doesn't use the recommended API for Hacker News.  I'd love to do this, if somebody wants to send me example code</ul>
-
-<ul>gutsy doesn't store older pages</ul>
-<ul>gutsy doesn't have built in search</ul>
-<ul>gutsy doesn't have command line options</ul>
-<ul>gutsy doesn't have an interactive mode with the most useful queries</ul>
-
-</li>
 
 
 
