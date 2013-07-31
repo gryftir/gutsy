@@ -35,7 +35,7 @@ sub new_from_filehandle {
 sub new_from_filename {
 	my ($classname, $filename) = @_;
 	my $filesave  = ".files/" . $filename;
-	open( my $filehandle, "<", $filesave ) or die "$!\n";
+	open( my $filehandle, "<", $filesave ) or die "$!\n invalid url or failed to download\n";
 	return $classname->new_from_filehandle($filehandle) ;
 }
 

@@ -15,6 +15,7 @@ sub new {
 		if ($right) {
 		my $comment = {};
 			$comment->{user} = $right->right()->look_down( "_tag", "a", "href", qr/^user?/ );
+			next unless $comment->{user};
        $comment->{user}->attr("href") =~ /^user\?id=(.*)/;
 			 $comment->{username} = $1;
 			 $comment->{post} = $comment->{user}->look_up( "_tag", "td" )->look_down( "_tag", "font" );

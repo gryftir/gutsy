@@ -1,5 +1,7 @@
-gutsy version 0.41
+gutsy version 0.5
 =====
+
+v0.5 added GutsyExample with H!B, Remote, intern, SF bay area, and perl subroutines;
 
 v0.41 can now print to html, downloading is no longer silent
 
