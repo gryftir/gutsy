@@ -17,6 +17,21 @@ gutsy requires curl and perl, and git to install.
 
 Gutsy requires curl, but can be made to work with LWP::Simple and Crypt:SSLeay http://search.cpan.org/~nanis/Crypt-SSLeay-0.64/SSLeay.pm for local download
 
+Usage
+------
+
+examples
+
+search for remote jobs
+
+./gutsy.pl -j remote
+
+search for jobs in the SF Bay Area
+
+./gutsy.pl -l sfbay
+
+see ./gutsy.pl -h for help and more options
+
 Licence
 --------
 
