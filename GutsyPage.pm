@@ -99,15 +99,19 @@ sub make_comments {
 }
 
 sub match_comments {
-	my ($self, $function )  = @_;
-	my $arrayref = [];
-	die "$!\n match comments null object or function\n" unless ($self && $function);
-	foreach my $post (@{$self->{comments}}) {
-		if ($function->($post) ) {
-			push( @$arrayref, $post );
+	my ($self, $functions )  = @_;
+	my @array = (@{$self->{comments}});
+die "$!\n match comments null object or function\n" unless ($self && $functions);
+foreach my $function (@$functions) {	
+	my @tempary;
+	foreach my $post (@array) {
+		if ($function->($post ) ) {
+				push( @tempary, $post );
+			}
 		}
+		@array = @tempary;
 	}
-	return $arrayref;
+	return \@array;
 }
 
 
