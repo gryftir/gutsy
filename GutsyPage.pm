@@ -52,11 +52,11 @@ sub new_from_url {
 	else {
 		$self->{page}[0] = HTML::TreeBuilder->new_from_url($url);
 		$self->{page}[0] || die "$!\n TreeBuilder/LWP::Agent failed\n";
-	}
-	$self->{comments}= [];
-	$self->{url} = $url;
 	bless( $self, $classname );
 	$self->make_comments();
+	}
+	$self->{url} = $url;
+	bless( $self, $classname );
 	return $self;
 }
 
@@ -96,6 +96,7 @@ sub make_comments {
 		if ($commentarray) {push (@{$self->{comments}}, @$commentarray);}
 		$self->{index}[$count - 1] = 1;
 	}
+	print scalar @{$self->{comments}}, "#\n";
 }
 
 sub match_comments {
@@ -118,6 +119,8 @@ foreach my $function (@$functions) {
 sub has_more {
 	my $self = shift;
 	my $index = shift || "0";
+	print "more\n" if $self->{page}[$index]
+	->look_down( "_tag" => "a", "href" => qr/^\/x\?.*/ );
 	return $self->{page}[$index]
 	->look_down( "_tag" => "a", "href" => qr/^\/x\?.*/ );
 }

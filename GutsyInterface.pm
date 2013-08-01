@@ -101,7 +101,7 @@ sub option {
 	}
 	if (!scalar @coderefary) {
 		print "default internship search\n\n";
-		$coderef = GutsyExample::get_subroutine( 1, "intern" );
+		$coderef = GutsyExample::get_subroutine("jobtype" , "intern" );
 		push (@coderefary, $coderef) if $coderef;
 	}
 	if ( !$url ) {
@@ -109,6 +109,7 @@ sub option {
 		print "no url included: using default $url\n";
 	}
 	my $page     = GutsyPage->new_complete_url($url);
+	print scalar @{ $page->{comments}}, " comments\n";
 	my $comments = $page->match_comments(\@coderefary);
 	my $filename;
 	if ($text) {
