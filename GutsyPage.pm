@@ -96,7 +96,6 @@ sub make_comments {
 		if ($commentarray) {push (@{$self->{comments}}, @$commentarray);}
 		$self->{index}[$count - 1] = 1;
 	}
-	print scalar @{$self->{comments}}, "#\n";
 }
 
 sub match_comments {
@@ -119,8 +118,6 @@ foreach my $function (@$functions) {
 sub has_more {
 	my $self = shift;
 	my $index = shift || "0";
-	print "more\n" if $self->{page}[$index]
-	->look_down( "_tag" => "a", "href" => qr/^\/x\?.*/ );
 	return $self->{page}[$index]
 	->look_down( "_tag" => "a", "href" => qr/^\/x\?.*/ );
 }
