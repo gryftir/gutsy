@@ -127,9 +127,9 @@ sub option {
 sub help {
 	die "\thelp for gutsy
 	-h|--help this help option 
-	-j|--jobtype  [ intern| h1b| remote ]
+	-j|--jobtype  [ intern | h1b | remote | entrylevel ]
 	-l|--location [ sfbay ]
-	-p|--proglang [ perl|ruby|python ]
+	-p|--proglang [ perl | ruby | python ]
 	-u|url <url to Who's Hiring Thread> default is current month
 	-f|--file <filename to save to> default is out.html
 	-t|--text print to text instead of html, changes default filename to out.txt";
