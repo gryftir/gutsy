@@ -105,7 +105,7 @@ sub option {
 		push (@coderefary, $coderef) if $coderef;
 	}
 	if ( !$url ) {
-		$url = "https://news.ycombinator.com/item?id=5970187";
+		$url = "https://news.ycombinator.com/item?id=6139927";
 		print "no url included: using default $url\n";
 	}
 	my $page     = GutsyPage->new_complete_url($url);
