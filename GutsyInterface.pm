@@ -109,7 +109,6 @@ sub option {
 		print "no url included: using default $url\n";
 	}
 	my $page     = GutsyPage->new_complete_url($url);
-	print scalar @{ $page->{comments}}, " comments\n";
 	my $comments = $page->match_comments(\@coderefary);
 	my $filename;
 	if ($text) {
