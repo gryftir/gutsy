@@ -1,4 +1,4 @@
-gutsy version 0.51
+gutsy version 0.52
 =====
 
 installation
@@ -63,6 +63,7 @@ Current Goals (in no particular order):
 Version Info
 -------
 
+v0.52 added link to poster's user profile in html output
 v0.51 made screen output clearer, added ability to combine multiple types of queries (location, job type, programming language)
 
 v0.5 added GutsyExample with H!B, Remote, intern, SF bay area, and perl subroutines;

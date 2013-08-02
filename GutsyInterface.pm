@@ -34,7 +34,8 @@ sub print_to_html {
 	'<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 	"http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD><TITLE>Gutsy</TITLE><link rel="stylesheet" href="sheet.css"></HEAD><BODY>';
 	foreach my $comment (@$comments) {
-		print $filehandle "\n<div>", $comment->get_post()->as_HTML(),
+		my $username = $comment->get_username();
+		print $filehandle "<div><a href=https://news.ycombinator.com/user?id=$username>User: $username</a><br>", $comment->get_post()->as_HTML(),
 		"\n</div>";
 	}
 	print $filehandle "\n\t</BODY>\n</HTML>";
