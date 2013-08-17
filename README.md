@@ -4,13 +4,21 @@ gutsy version 0.52
 installation
 -----------
 
-gutsy requires curl and perl, and git to install.
+gutsy requires curl and perl, HTML::TreeBuilder (available from perlbrew or CPAN) and git to install.
 
     sudo apt-get update
-    sudo apt-get install curl perl  
+    sudo apt-get install curl perl
+    
     
     git clone https://github.com/gryftir/gutsy.git ~/gutsy
     cd ~/gutsy
+    
+    you need to run cpan (included with perl) and install HTML::TreeBuilder 
+    install HTML::TreeBuilder 
+    
+    exit cpan
+    
+    then you can use either:
     ./gutsy.pl or perl gutsy.pl to run
     
 
