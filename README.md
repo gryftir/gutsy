@@ -1,5 +1,7 @@
-gutsy version .3
+gutsy version .301
 =====
+
+.301 updated to september url
 
 .3 Follow's More links to download all top level comments, allows passing a subroutine reference to pull out specific entries.
 
@@ -14,6 +16,7 @@ Requires Crypt:SSLeay http://search.cpan.org/~nanis/Crypt-SSLeay-0.64/SSLeay.pm 
 License is GPL3
 
 Note: Gutsy is a work in progress, and currently has several issues that will be addressed in the next version
+
 
 current issues:
 <li>

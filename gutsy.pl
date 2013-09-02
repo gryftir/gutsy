@@ -2,7 +2,7 @@
 use strict;
 use HTML::TreeBuilder;
 use GutsyPage;
-my $start_url = "https://news.ycombinator.com/item?id=5803764";
+my $start_url = "https://news.ycombinator.com/item?id=6310234";
 my @pages
   ; #for the More Pages.  Note class="title" 2 on first page q, 1 on intermediate page, none on last page.
 my $gutsypage = GutsyPage->new_complete_url($start_url);
