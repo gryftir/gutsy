@@ -71,6 +71,7 @@ Current Goals (in no particular order):
 Version Info
 -------
 
+v0.6 full text search
 v0.521 minor bump for september url
 v0.52 added link to poster's user profile in html output
 v0.51 made screen output clearer, added ability to combine multiple types of queries (location, job type, programming language)
