@@ -70,7 +70,7 @@ sub option {
 	my $coderef = "";
 	my @coderefary;
 	my ($arrayref) = @_;
-	my ( $jobtype, $location, $proglang, $url, $number, $file, $text, $help ) =
+	my ( $jobtype, $location, $proglang, $url, $number, $file, $text, $help, $search ) =
 	@{$arrayref};
 	if ($help) { help(); }
 	elsif ( $jobtype ne "" ) {
@@ -106,9 +106,11 @@ sub option {
 		push (@coderefary, $coderef) if $coderef;
 	}
 	if ( !$url ) {
-		$url = "https://news.ycombinator.com/item?id=6310234";
-		print "no url included: using default $url\n";
+		$url = "";
+		print "no url included: using default\n";
 	}
+	if ($search) {push (@coderefary, search($search))  }; #use search term
+
 	my $page     = GutsyPage->new_complete_url($url);
 	my $comments = $page->match_comments(\@coderefary);
 	my $filename;
@@ -133,7 +135,8 @@ sub help {
 	-p|--proglang [ perl | ruby | python ]
 	-u|url <url to Who's Hiring Thread> default is current month
 	-f|--file <filename to save to> default is out.html
-	-t|--text print to text instead of html, changes default filename to out.txt";
+	-t|--text print to text instead of html, changes default filename to out.txt
+	-s|--search search with a perl regular expression";
 }
 
 sub top_menu {
@@ -203,6 +206,18 @@ sub proglang_menu {
 	elsif ( $value == 0 ) { return 0; }
 	print "invalid option";
 	return 0;
+}
+
+sub search {
+	my $pattern = shift;
+	my $regex = eval { qr/$pattern/ };
+	die "invalid search pattern $@" if $@;
+	return sub { 
+			my $post = shift;
+			return ( $post
+				&& $post->get_post()->format() =~
+				/$regex/i ) ? 1 : 0;
+		}
 }
 
 1;
