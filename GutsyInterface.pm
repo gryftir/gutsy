@@ -109,7 +109,7 @@ sub option {
 		$url = "https://news.ycombinator.com/item?id=6310234";
 		print "no url included: using default $url\n";
 	}
-	if ($search) {push (@coderefary, search($search))  }; #use search term
+	if ($search) {push (@coderefary, search($search)); print "searching for $search\n"; } #use search term
 
 	my $page     = GutsyPage->new_complete_url($url);
 	my $comments = $page->match_comments(\@coderefary);

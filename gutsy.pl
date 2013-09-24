@@ -14,7 +14,7 @@ GetOptions(
 	"h|help" => \$help,
 	"f|file=s" => \$file,
 	"t|text" => \$text,
-	"s|search" => \$search);
+	"s|search=s" => \$search);
 
 my @optionarr = ($jobtype, $location, $proglang, $url, $number, $file, $text, $help, $search);
 GutsyInterface::option(\@optionarr);
