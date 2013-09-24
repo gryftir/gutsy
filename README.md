@@ -1,4 +1,4 @@
-gutsy version 0.521
+gutsy version 0.6
 =====
 
 installation
@@ -54,10 +54,10 @@ Current Goals (in no particular order):
 <ul>make gutsy polite and have it use the recommended API for Hacker News.  I'd love to do this, if somebody wants to send me example code</ul>
 <ul>make gutsy  have an interactive mode with the most useful queries</ul>
 <ul>make gutsy doesn't store older pages.  I am not sure this is possible with current pages, but storing old pages may work, and may be useful for statistical analysis</ul>
-<ul>make gutsy have built in search</ul>
 <ul>add more subroutines.  I take pull requests</ul>
 
 
+<ul><del>make gutsy have built in search</del> Done, use -s|--search. Need to text more complex options</ul>
 <ul><del>allow mixing subroutines in command line mode </del> Done, you can combine jobtype, location and language queries from the command line, and they are treated as logical AND </ul>
 <ul><del>gutsy doesn't have command line options</del> Done, now takes command line arguments</ul>
 <ul><del>gutsy uses a rather simplistic means to parse the html file.</del> Done, uses HTML::TreeBuilder</ul>
