@@ -41,7 +41,7 @@ sub internref {
 sub h1bref {
 	my $post = shift;
 	return ( $post
-		&& $post->get_post()->format() =~ /h1b|visa/i
+		&& $post->get_post()->format() =~ /h1-?b|visa/i
 		&& !( $post->get_post()->format() =~ /(no|not)\s*(hib|visa)/i ) )
 	? 1
 	: 0;
