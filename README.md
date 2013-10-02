@@ -1,4 +1,4 @@
-gutsy version 0.6
+gutsy version 0.601
 =====
 
 installation
@@ -71,15 +71,15 @@ Current Goals (in no particular order):
 Version Info
 -------
 
+v0.601 minor bump for October
 v0.6 full text search
+
 v0.521 minor bump for september url
 v0.52 added link to poster's user profile in html output
 v0.51 made screen output clearer, added ability to combine multiple types of queries (location, job type, programming language)
-
 v0.5 added GutsyExample with H!B, Remote, intern, SF bay area, and perl subroutines;
 
 v0.41 can now print to html, downloading is no longer silent
-
 v0.4 printing is better thanks to using format() instead of as_text.  Also added GutsyComment class, with an array of comments.
 
 v0.3 Follow's More links to download all top level comments, allows passing a subroutine reference to pull out specific entries.
@@ -95,4 +95,5 @@ Currently you can pass a subroutine to spit out relevant comments.
 
 Other features to be added in the next version: 
 add search options for remote, H1B, and categorize by location
+
 

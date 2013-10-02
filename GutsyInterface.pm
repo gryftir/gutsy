@@ -106,7 +106,7 @@ sub option {
 		push (@coderefary, $coderef) if $coderef;
 	}
 	if ( !$url ) {
-		$url = "https://news.ycombinator.com/item?id=6310234";
+		$url = "https://news.ycombinator.com/item?id=6475879";
 		print "no url included: using default $url\n";
 	}
 	if ($search) {push (@coderefary, search($search)); print "searching for $search\n"; } #use search term
