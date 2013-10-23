@@ -101,8 +101,8 @@ sub option {
 		}
 	}
 	if (!scalar @coderefary) {
-		print "default internship search\n\n";
-		$coderef = GutsyExample::get_subroutine("jobtype" , "intern" );
+		print "default search all entries\n\n";
+		$coderef = GutsyExample::default();
 		push (@coderefary, $coderef) if $coderef;
 	}
 	if ( !$url ) {

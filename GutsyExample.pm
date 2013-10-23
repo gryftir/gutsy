@@ -26,6 +26,9 @@ sub get_subroutine {
 }
 
 #=============================================================================
+#return all 
+sub default { return sub {return 1;} 
+}
 #jobtypes
 
 #interns
