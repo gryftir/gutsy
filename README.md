@@ -1,4 +1,4 @@
-gutsy version 0.601
+gutsy version 0.610
 =====
 
 installation
@@ -70,7 +70,7 @@ Current Goals (in no particular order):
 
 Version Info
 -------
-
+v0.610 Changed default to save all entries and updated for November
 v0.601 minor bump for October
 v0.6 full text search
 
