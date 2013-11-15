@@ -11,7 +11,7 @@ use GutsyComment;
 sub new_complete_url {
 	my ($classname, $url) = @_;
 	my $self      = $classname->new_from_url($url);
-	$self->{title} = $self->{page}[0]->look_down("_tag", "title")->as_text();
+	$self->{title} = $self->{page}[0]->look_down("_tag", "title");
 	for ( my $index = 0 ; ( my $next = $self->has_more($index) ) ; $index++ ) {
 		my $addurl = "https://news.ycombinator.com" . $next->attr("href");
 		$self->add_from_url($addurl);
@@ -79,6 +79,23 @@ sub get_url {
 	return $self->{url};
 }
 
+#get matched comments
+sub get_matched {
+	my $self = shift;
+	return $self->{matched};
+}
+
+#get total comments count
+sub get_total_comments_count {
+	my $self = shift;
+	return scalar @{$self->{comments}};
+}
+#get matched  comments count
+sub get_matched_comments_count {
+	my $self = shift;
+	return scalar @{$self->{matched}};
+}
+
 #page title
 sub get_title {
 	my $self=shift;
@@ -111,7 +128,8 @@ foreach my $function (@$functions) {
 		}
 		@array = @tempary;
 	}
-	return \@array;
+	$self->{matched} = \@array;
+	return scalar @array;
 }
 
 

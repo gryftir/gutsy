@@ -14,8 +14,9 @@ sub print_screen {
 }
 
 sub print_to_text_file {
-	my ( $comments, $filehandle ) = shift;
-	foreach my $comment (@$comments) {
+	my ( $page, $filehandle ) = @_;
+	print $filehandle "Gutsy\n" ,  $page->get_title()->format(), "\n";	
+	foreach my $comment (@{$page->get_matched()}) {
 		print $filehandle _print_string($comment);
 	}
 }
@@ -29,11 +30,13 @@ sub _print_string {
 }
 
 sub print_to_html {
-	my ( $comments, $filehandle ) = @_;
+	my ( $page, $filehandle ) = @_;
 	print $filehandle
 	'<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD><TITLE>Gutsy</TITLE><link rel="stylesheet" href="sheet.css"></HEAD><BODY>';
-	foreach my $comment (@$comments) {
+	"http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD>';
+	print $filehandle "\n<TITLE>Gutsy ", $page->get_title()->format(), "</TITLE>\n";
+	print $filehandle '<link rel="stylesheet" href="sheet.css"></HEAD><BODY>', "\n";
+	foreach my $comment (@{$page->get_matched()}) {
 		my $username = $comment->get_username();
 		print $filehandle "<div><a href=https://news.ycombinator.com/user?id=$username>User: $username</a><br>", $comment->get_post()->as_HTML(),
 		"\n</div>";
@@ -112,19 +115,21 @@ sub option {
 	if ($search) {push (@coderefary, search($search)); print "searching for $search\n"; } #use search term
 
 	my $page     = GutsyPage->new_complete_url($url);
-	my $comments = $page->match_comments(\@coderefary);
+	my $comment_success = $page->match_comments(\@coderefary);
 	my $filename;
+	unless ($comment_success) { print "no comments found, aborting printing to file\n"; return;}
 	if ($text) {
 		$filename = $file || "out.txt";
 		open( my $filehandle, ">", $filename ) or die "$! can't open file";
-		print_to_text_file( $comments, $filehandle );
+		print_to_text_file( $page, $filehandle );
 	}
 	else {
 		$filename = $file || "out.html";
 		open( my $filehandle, ">", $filename ) or die "$! can't open file";
-		print_to_html( $comments, $filehandle );
+		print_to_html( $page, $filehandle );
 	}
-		print scalar @$comments, " comments output to $filename\n";
+		print $page->get_matched_comments_count(), " comments out of ", 
+		$page->get_total_comments_count(), " output to $filename\n";
 }
 
 sub help {
