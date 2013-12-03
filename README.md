@@ -1,4 +1,4 @@
-gutsy version 0.610
+gutsy version 0.621
 =====
 
 installation
@@ -70,6 +70,8 @@ Current Goals (in no particular order):
 
 Version Info
 -------
+v0.621 updated for December
+v0.620 print title in file output and comment count out of total comments in text output
 v0.610 Changed default to save all entries and updated for November
 v0.601 minor bump for October
 v0.6 full text search
