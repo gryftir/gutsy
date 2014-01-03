@@ -38,8 +38,8 @@ sub print_to_html {
 	print $filehandle '<link rel="stylesheet" href="sheet.css"></HEAD><BODY>', "\n";
 	foreach my $comment (@{$page->get_matched()}) {
 		my $username = $comment->get_username();
-		print $filehandle "<div><a href=https://news.ycombinator.com/user?id=$username>User: $username</a><br>", $comment->get_post()->as_HTML(),
-		"\n</div>";
+		print $filehandle "<div class=\"comment\"><a href=https://news.ycombinator.com/user?id=$username>User: $username</a><br>", $comment->get_post()->as_HTML(),
+		"\n</div>\n\n";
 	}
 	print $filehandle "\n\t</BODY>\n</HTML>";
 }
