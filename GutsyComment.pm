@@ -2,23 +2,23 @@ package GutsyComment;
 use strict;
 use warnings;
 
-#creates information for each top level comment
+#creates comment objects and passes back an array of them
 sub new {
-    my $classname = shift;
-    return undef unless scalar @_;
-    my $posts       = \@_;
+    my @posts       = @_;
+    my $classname   = shift @posts;
     my $comarrayref = [];
-    foreach my $post (@$posts) {
+    foreach my $post (@posts) {
         next unless $post;
-        my @line  = $post->lineage();
-        my $right = $line[0]->right();
-        if ($right) {
+        my @line         = $post->lineage();
+        my $rightElement = $line[0]->right();
+        if ($rightElement) {
             my $comment = {};
             $comment->{user} =
-              $right->right()->look_down( "_tag", "a", "href", qr/^user?/ );
+              $rightElement->right()
+              ->look_down( "_tag", "a", "href", qr/^user?/x );
             next unless $comment->{user};
-            $comment->{user}->attr("href") =~ /^user\?id=(.*)/;
-            $comment->{username} = $1;
+            $comment->{user}->attr("href") =~ /^user\?id=(?<username>.*)/x;
+            $comment->{username} = $+{username};
             $comment->{post} =
               $comment->{user}->look_up( "_tag", "td" )
               ->look_down( "_tag", "font" );

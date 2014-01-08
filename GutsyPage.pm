@@ -18,24 +18,20 @@ sub new_complete_url {
     return $self;
 }
 
-sub new_from_filehandle {
-    my ( $classname, $filehandle ) = @_;
-    my $self = {};
-    $self->{page}     = [];
-    $self->{page}[0]  = HTML::TreeBuilder->new_from_file($filehandle);
-    $self->{comments} = [];
-    close $filehandle;
-    bless( $self, $classname );
-    $self->make_comments();
-    return $self;
-}
 
 sub new_from_filename {
     my ( $classname, $filename ) = @_;
     my $filesave = ".files/" . $filename;
     open( my $filehandle, "<", $filesave )
-      or die "$!\n invalid url or failed to download\n";
-    return $classname->new_from_filehandle($filehandle);
+      or die "$!\n invalid url or failed to download\n"; 
+	my $self = {};
+	$self->{page}     = [];
+	$self->{page}[0]  = HTML::TreeBuilder->new_from_file($filehandle);
+	$self->{comments} = [];
+	close $filehandle;
+	bless( $self, $classname );
+	$self->make_comments();
+	return $self;
 }
 
 sub new_from_url {
@@ -114,6 +110,7 @@ sub make_comments {
         if ($commentarray) { push( @{ $self->{comments} }, @$commentarray ); }
         $self->{index}[ $count - 1 ] = 1;
     }
+	return scalar @{$self->{comments}};
 }
 
 sub match_comments {
@@ -138,18 +135,18 @@ sub has_more {
     my $self = shift;
     my $index = shift || "0";
     return $self->{page}[$index]
-      ->look_down( "_tag" => "a", "href" => qr/^\/x\?.*/ );
+      ->look_down( "_tag" => "a", "href" => qr/^\/x\?.*/x );
 }
 
 sub download {
     my ( $classname, $url ) = @_;
     mkdir(".files") unless -d ".files";
-    $url =~ /(\w+)$/;
-    my $filesave = ".files/" . $1 . ".html";
+    $url =~ /(?<filename>\w+)$/x;
+    my $filesave = ".files/" . $+{filename} . ".html";
     print "Downloading $url ...\n";
     system("curl --silent $url -o $filesave") == 0
       or die "$!\n curl failed\n";
-    return $1 . ".html";
+    return $+{filename} . ".html";
 }
 
 sub add_from_url {
@@ -157,8 +154,11 @@ sub add_from_url {
     my $filename = GutsyPage->download($url);
     my $filesave = ".files/" . $filename;
     open( my $filehandle, "<", $filesave ) or die "$!\n";
+	#filehandle closed in new_from_file;
     push @{ $self->{page} }, HTML::TreeBuilder->new_from_file($filehandle);
+	close $filehandle;
     $self->make_comments();
+	return $self->get_comments();
 }
 
 1;

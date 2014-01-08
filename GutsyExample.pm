@@ -1,24 +1,25 @@
 package GutsyExample;
 use strict;
 use warnings;
-our %codehash;
-$codehash{"jobtype"}  = {};
-$codehash{"location"} = {};
-$codehash{"proglang"} = {};
-
-$codehash{"jobtype"}{"intern"}     = \&internref;
-$codehash{"jobtype"}{"h1b"}        = \&h1bref;
-$codehash{"jobtype"}{"remote"}     = \&remoteref;
-$codehash{"jobtype"}{"entrylevel"} = \&entrylevelref;
-
-$codehash{"location"}{"sfbay"} = \&sfbayref;
-
-$codehash{"proglang"}{"perl"}   = \&perlref;
-$codehash{"proglang"}{"ruby"}   = \&rubyref;
-$codehash{"proglang"}{"python"} = \&pythonref;
 
 sub get_subroutine {
     my ( $type, $value ) = @_;
+    my %codehash;
+    $codehash{"jobtype"}  = {};
+    $codehash{"location"} = {};
+    $codehash{"proglang"} = {};
+
+    $codehash{"jobtype"}{"intern"}     = \&internref;
+    $codehash{"jobtype"}{"h1b"}        = \&h1bref;
+    $codehash{"jobtype"}{"remote"}     = \&remoteref;
+    $codehash{"jobtype"}{"entrylevel"} = \&entrylevelref;
+
+    $codehash{"location"}{"sfbay"} = \&sfbayref;
+
+    $codehash{"proglang"}{"perl"}   = \&perlref;
+    $codehash{"proglang"}{"ruby"}   = \&rubyref;
+    $codehash{"proglang"}{"python"} = \&pythonref;
+
     my $returnval =
       defined $codehash{$type}{ lc $value } ? $codehash{$type}{$value} : 0;
     print "Using $value search for $type\n" if $returnval;
@@ -27,7 +28,7 @@ sub get_subroutine {
 
 #=============================================================================
 #return all
-sub default {
+sub returnAll {
     return sub { return 1; }
 }
 
@@ -38,7 +39,7 @@ sub internref {
     my $post = shift;
     return ( $post
           && $post->get_post()->format() =~
-          /[[:^alpha:]](intern|internship)[sS]?[[:^alpha:]]/i ) ? 1 : 0;
+          /[[:^alpha:]](intern|internship)[sS]?[[:^alpha:]]/ix ) ? 1 : 0;
 }
 
 #hib
@@ -46,8 +47,8 @@ sub internref {
 sub h1bref {
     my $post = shift;
     return ( $post
-          && $post->get_post()->format() =~ /h1-?b|visa/i
-          && !( $post->get_post()->format() =~ /(no|not)\s*(hib|visa)/i ) )
+          && $post->get_post()->format() =~ /h1-?b|visa/ix
+          && !( $post->get_post()->format() =~ /(no|not)\s*(hib|visa)/ix ) )
       ? 1
       : 0;
 }
@@ -58,7 +59,8 @@ sub remoteref {
     return (
              $post
           && $post->get_post()->format() =~
-/remote|you\s+can\s+be\s+anywhere|work\s*from\s*(home|anywhere)|distributed\s+team/i
+          /remote|you\s+can\s+be\s+anywhere|work
+\s*from\s*(home|anywhere)|distributed\s+team/ix
           && !(
             $post->get_post()->format() =~
             /(no|not)\s*remote|remote\s*control|can't\s*accept\s*remote/ix
@@ -71,8 +73,8 @@ sub remoteref {
 sub entrylevelref {
     my $post = shift;
     return ( $post
-          && $post->get_post()->format() =~ /entry|junior/i
-          && !( $post->get_post()->format() =~ /not\s+an\s+entry/i ) ) ? 1 : 0;
+          && $post->get_post()->format() =~ /entry|junior/ix
+          && !( $post->get_post()->format() =~ /not\s+an\s+entry/ix ) ) ? 1 : 0;
 }
 
 #=============================================================================
@@ -84,8 +86,10 @@ sub sfbayref {
     return (
              $post
           && $post->get_post()->format() =~
-/san\s*francisco|palo\s*alto|san\s*jose|[[:^alpha:]]sj|mountain\s*view|cupertino|sunnyvale|santa\s*clara|
-		downtown\s*mv|[[:^alpha:]]sf[[:^alpha:]]|berkeley|oakland|fremont|stanford|sf\s*bay|san\s*mateo|alameda/ix
+          /san\s*francisco|palo\s*alto|san\s*jose|[[:^alpha:]]
+	sj|mountain\s*view|cupertino|sunnyvale|santa\s*clara|
+	downtown\s*mv|[[:^alpha:]]sf[[:^alpha:]]|berkeley|oakland
+	|fremont|stanford|sf\s*bay|san\s*mateo|alameda/ix
     ) ? 1 : 0;
 }
 
@@ -93,18 +97,20 @@ sub sfbayref {
 #Perl
 sub perlref {
     my $post = shift;
-    return ( $post && $post->get_post()->format() =~ /perl(?!y)/i ) ? 1 : 0;
+    return ( $post && $post->get_post()->format() =~ /perl(?!y)/ix ) ? 1 : 0;
 }
 
 #ruby
 sub rubyref {
     my $post = shift;
-    return ( $post && $post->get_post()->format() =~ /ruby|rails/i ) ? 1 : 0;
+    return ( $post && $post->get_post()->format() =~ /ruby|rails/ix ) ? 1 : 0;
 }
 
 #python
 sub pythonref {
     my $post = shift;
-    return ( $post && $post->get_post()->format() =~ /python|django/i ) ? 1 : 0;
+    return ( $post && $post->get_post()->format() =~ /python|django/ix )
+      ? 1
+      : 0;
 }
 1;
