@@ -6,6 +6,7 @@ use GutsyExample;
 
 #print to file, display, and other useful tools for Gutsy
 
+
 sub print_screen {
     my $comments = shift;
     foreach my $comment (@$comments) {
