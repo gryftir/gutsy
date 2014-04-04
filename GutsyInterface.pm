@@ -40,6 +40,7 @@ sub print_to_html {
       "</TITLE>\n";
     print $filehandle '<link rel="stylesheet" href="sheet.css"></HEAD><BODY>',
       "\n";
+	print $filehandle  "<h1>", $page->get_title()->format(), "</h1>";
     foreach my $comment ( @{ $page->get_matched() } ) {
         my $username = $comment->get_username();
         print $filehandle
