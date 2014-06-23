@@ -1,4 +1,4 @@
-gutsy version 0.622
+gutsy version 0.624
 =====
 
 installation
@@ -70,6 +70,7 @@ Current Goals (in no particular order):
 
 Version Info
 -------
+v0.623 updates for June, reorganized command line options to better permit refactoring
 v0.622 updated for January, minor edit of html output code
 v0.621 updated for December
 v0.620 print title in file output and comment count out of total comments in text output

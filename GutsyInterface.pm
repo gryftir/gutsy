@@ -78,17 +78,18 @@ sub pen_write_file {
     return $filehandle;
 }
 
+sub get_code_reference {
+	my	( $hash_ref )	= @_;
+	return ;
+} ## --- end sub get_code_reference
+
 sub option {
-    my ($arrayref) = @_;
-    my (
-        $jobtype, $location, $proglang, $url, $number,
-        $file,    $text,     $help,     $search
-    ) = @{$arrayref};
+    my ($hash_ref) = @_;
     my $coderef = "";
     my @coderefary;
-    if ($help) { help(); }
-    elsif ( $jobtype ne "" ) {
-        $coderef = GutsyExample::get_subroutine( "jobtype", $jobtype );
+    if ($hash_ref->{help}) { help(); }
+    elsif ( $hash_ref->{jobtype} ne "" ) {
+        $coderef = GutsyExample::get_subroutine( "jobtype", $hash_ref->{jobtype} );
         if ($coderef) {
             push( @coderefary, $coderef );
         }
@@ -96,8 +97,8 @@ sub option {
             print "Invalid Job Type\n";
         }
     }
-    if ( $location ne "" ) {
-        $coderef = GutsyExample::get_subroutine( "location", $location );
+    if ( $hash_ref->{location} ne "" ) {
+        $coderef = GutsyExample::get_subroutine( "location", $hash_ref->{location} );
         if ($coderef) {
             push( @coderefary, $coderef );
         }
@@ -105,8 +106,8 @@ sub option {
             print "Invalid Location\n";
         }
     }
-    if ( $proglang ne "" ) {
-        $coderef = GutsyExample::get_subroutine( "proglang", $proglang );
+    if ( $hash_ref->{proglang} ne "" ) {
+        $coderef = GutsyExample::get_subroutine( "proglang", $hash_ref->{proglang} );
         if ($coderef) {
             push( @coderefary, $coderef );
         }
@@ -119,30 +120,30 @@ sub option {
         $coderef = GutsyExample::returnAll();
         push( @coderefary, $coderef ) if $coderef;
     }
-    if ( !$url ) {
-        $url = "https://news.ycombinator.com/item?id=7679431";    #jan 2014
-        print "no url included: using default $url\n";
+    if ( !$hash_ref->{url} ) {
+        $hash_ref->{url} = "https://news.ycombinator.com/item?id=7829042";    #june 2014
+        print "no url included: using default $hash_ref->{url}\n";
     }
-    if ($search) {
-        push( @coderefary, search($search) );
-        print "searching for $search\n";
+    if ($hash_ref->{search}) {
+        push( @coderefary, search($hash_ref->{search}) );
+        print "searching for $hash_ref->{search}\n";
     }    #use search term
 
-    my $page            = GutsyPage->new_complete_url($url);
+    my $page            = GutsyPage->new_complete_url($hash_ref->{url});
     my $comment_success = $page->match_comments( \@coderefary );
     my $filename;
     unless ($comment_success) {
         print "no comments found, aborting printing to file\n";
         return;
     }
-    if ($text) {
-        $filename = $file || "out.txt";
+    if ($hash_ref->{text}) {
+        $filename = $hash_ref->{file} || "out.txt";
         open( my $filehandle, ">", $filename ) or die "$! can't open file";
         print_to_text_file( $page, $filehandle );
         close $filehandle;
     }
     else {
-        $filename = $file || "out.html";
+        $filename = $hash_ref->{file} || "out.html";
         open( my $filehandle, ">", $filename ) or die "$! can't open file";
         print_to_html( $page, $filehandle );
         close $filehandle;
