@@ -121,7 +121,7 @@ sub option {
         push( @coderefary, $coderef ) if $coderef;
     }
     if ( !$hash_ref->{url} ) {
-        $hash_ref->{url} = "https://news.ycombinator.com/item?id=7829042";    #june 2014
+        $hash_ref->{url} = "https://news.ycombinator.com/item?id=7970366";    #july 2014
         print "no url included: using default $hash_ref->{url}\n";
     }
     if ($hash_ref->{search}) {
