@@ -9,17 +9,18 @@ sub get_subroutine {
     $codehash{"location"} = {};
     $codehash{"proglang"} = {};
 
-    $codehash{"jobtype"}{"intern"}     = \&internref;
-    $codehash{"jobtype"}{"h1b"}        = \&h1bref;
-    $codehash{"jobtype"}{"remote"}     = \&remoteref;
-    $codehash{"jobtype"}{"entrylevel"} = \&entrylevelref;
+    $codehash{"jobtype"}{"intern"}      = \&internref;
+    $codehash{"jobtype"}{"h1b"}         = \&h1bref;
+    $codehash{"jobtype"}{"remote"}      = \&remoteref;
+    $codehash{"jobtype"}{"entrylevel"}  = \&entrylevelref;
 
-    $codehash{"location"}{"sfbay"}     = \&sfbayref;
+    $codehash{"location"}{"sfbay"}      = \&sfbayref;
 
-    $codehash{"proglang"}{"perl"}      = \&perlref;
-    $codehash{"proglang"}{"ruby"}      = \&rubyref;
-    $codehash{"proglang"}{"python"}    = \&pythonref;
-    $codehash{"proglang"}{"c"}         = \&cref;
+    $codehash{"proglang"}{"perl"}       = \&perlref;
+    $codehash{"proglang"}{"ruby"}       = \&rubyref;
+    $codehash{"proglang"}{"python"}     = \&pythonref;
+    $codehash{"proglang"}{"c"}          = \&cref;
+    $codehash{"proglang"}{"javascript"} = \&jsref;
 
     my $returnval =
       defined $codehash{$type}{ lc $value } ? $codehash{$type}{$value} : 0;
@@ -119,6 +120,12 @@ sub pythonref {
 sub cref {
     my $post = shift;
     return ($post && $post->get_post()->format() =~ /\sc\s/ix)
+      ? 1
+      : 0;
+}
+sub jsref {
+    my $post = shift;
+    return ($post && $post->get_post()->format() =~ /js|query|node|javascript|angular|ember|jasmine/ix)
       ? 1
       : 0;
 }

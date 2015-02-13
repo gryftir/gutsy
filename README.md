@@ -70,7 +70,7 @@ Current Goals (in no particular order):
 
 Version Info
 -------
-v0.626 Updated for February, added C as language search option
+v0.626 Updated for February, added c and javascript as language search options
 v0.625 Updated for November
 v0.624 Updated for July
 v0.623 updates for June, reorganized command line options to better permit refactoring
