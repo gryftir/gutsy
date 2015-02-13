@@ -14,11 +14,12 @@ sub get_subroutine {
     $codehash{"jobtype"}{"remote"}     = \&remoteref;
     $codehash{"jobtype"}{"entrylevel"} = \&entrylevelref;
 
-    $codehash{"location"}{"sfbay"} = \&sfbayref;
+    $codehash{"location"}{"sfbay"}     = \&sfbayref;
 
-    $codehash{"proglang"}{"perl"}   = \&perlref;
-    $codehash{"proglang"}{"ruby"}   = \&rubyref;
-    $codehash{"proglang"}{"python"} = \&pythonref;
+    $codehash{"proglang"}{"perl"}      = \&perlref;
+    $codehash{"proglang"}{"ruby"}      = \&rubyref;
+    $codehash{"proglang"}{"python"}    = \&pythonref;
+    $codehash{"proglang"}{"c"}         = \&cref;
 
     my $returnval =
       defined $codehash{$type}{ lc $value } ? $codehash{$type}{$value} : 0;
@@ -113,4 +114,13 @@ sub pythonref {
       ? 1
       : 0;
 }
+
+#C 
+sub cref {
+    my $post = shift;
+    return ($post && $post->get_post()->format() =~ /\sc\s/ix)
+      ? 1
+      : 0;
+}
+
 1;
